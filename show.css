@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.continer{
+    width: 1100px;
+    height: 1500px;
+    background-color: rgb(215, 209, 209);
+    margin-left: 19%;
+    padding: 10px;
+    border-radius: 35px;
+    box-shadow: black 2px 2px 20px 15px; 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(150, 150, 150);
+    padding: 10px;
+    height: 230px;
+    border-radius: 35px;
+    
+}
+header h1{
+    text-align: center;
+    height: 120px;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: black 5px 5px 10px 5px;
+    border-radius: 25px;
+    transition: 0.5s;
+    font-weight: 900;
+    
+}
+header h1:hover{
+    transform: scale(1.2);
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width:  80px;
+    height: 80px;
+    margin: 5px;
+    transition: 0.5s;
+}
+img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.line1{
+    display: flex;
+    position: absolute;
+    top: 160px;
+    left: 1000px;
+}
+.line2{
+    height: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    top: 50px;
+    left: 1000px;
+    
+}
+
+
+#sel1{
+    width: 500px;
+    height: 90px;
+    position: absolute;
+    left: 55%;
+    top: 300px;
+    transform: translate(-50%);
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: black 2px 2px 10px 3px;
+}
+#op1{
+text-align: center;
+font-size: 30px;
+}
+
+.content{
+    position: absolute;
+    top: 450px;
+    left: 480px;
+    font-size: 30px;
+    
+}
+
+#hj1{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    left: 550px;
+    display: inline;
+}
+.p5{
+    position: absolute;
+        top: 65px;
+        left: 440px;
+        display: inline;
+    }
+    .bo{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(92, 185, 197);
+        padding: 20px;
+        
+    }
+#dateDisplay{
+    position: absolute;
+    top: 67px;
+    left: 170px;
+    font-weight: 900;
+    font-size: 30px;
+}
+#current-time{
+    width: fit-content;
+    position: absolute;
+    top: 65px;
+    left: -100px;
+}
+.t1{
+    position: absolute;
+    top: 65px;
+    left: 100px;
+}
+.in1{
+    width: 150px;
+    height: 40px;
+    font-size: 20px ;
+    text-align: center;
+    border-radius: 20px;
+}
+.ind{
+    position: absolute;
+    display: inline;
+    top: 180px;
+    left: 320px;
+    
+}
+.p6{
+    position: absolute;
+    top: 120px;
+    left: 10000;
+}
+.p7{
+    display: inline;
+    position: absolute;
+    top: 180px;
+    left: 500px;
+}
+.p8{
+    position: absolute;
+    top: 180px;
+    left: 160px;
+}
+.inb{
+    position: absolute;
+    top: 180px;
+    left: -20px;
+}
+.p9{
+    position: absolute;
+    top: 240px;
+    left: 600px;
+}
+.ina{
+    position: absolute;
+    top: 240px;
+    left: 400px;
+}
+.p10{
+    position: absolute;
+    top: 240px;
+    left: 170px;
+}
+.inx{
+    position: absolute;
+    top: 240px;
+    left: -10px;
+}
+.p11{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+}
+.inq{
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+.p12{
+    position: absolute;
+    top: 300px;
+    left: 190px;
+}
+.inz{
+    position: absolute;
+    top: 300px;
+    left: -20px;
+}
+#signature-canvas {
+    border: 3px solid #000000;
+    position: absolute;
+    top: 300px;
+    left: -50px;
+    
+}
+.p13{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+}
+.inm{
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+#w3{
+    position: absolute;
+    top: 370px;
+    left: 500px;
+}
+.hr1{
+    position: relative;
+    color: #ff0000;
+    top: 300px;
+    width: 850px;
+}
