@@ -1,0 +1,101 @@
+@font-face {
+    font-family: Arabic;
+    src: url("DIN-Next-LT-Arabic-Light.ttf") format(truetype);
+}
+:root{
+    --img: 4em;
+}
+html , *{
+    /* overflow: hidden; */
+    direction: rtl;
+    font-family: sans-serif;
+    text-align: right;
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content:center;
+    flex-direction: row-reverse;
+    gap: 3em;
+    width: 100vw;
+    height: fit-content;
+    border-bottom: 4px solid rgb(1, 81, 64) ;
+    & h1{
+        align-self: center;
+        font-size: .5;
+        border: none;
+        position: relative;
+        isolation: isolate;
+        /* & .blob{
+            position: absolute;
+            left: -15px;
+            top: -30px;
+            width: 157%;
+            height: 180%;
+            background-color: rgb(1, 81, 64);
+            border: 1px solid rgb(1, 81, 64);
+            border-radius: 100% 0% 50% 0% / 0% 0% 100% 0%  ;
+            z-index: -1;
+        }
+        & .blob-white{
+            position: absolute;
+            left: 107%;
+            top: -10px;
+            transform: rotate(-45deg);
+            width: 120px;
+            height: 50px;
+            background-color: white;
+            border-radius: 100%  ;
+            border-top: 1px solid rgb(1, 81, 64); 
+            z-index: -1;
+        } */
+    }
+    
+}
+img{
+    width: var(--img);
+    height: var(--img);
+    margin: 0 1em;
+}
+.container , article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+.compine{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40em;
+    gap: .3em;
+}
+.members{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr;
+
+}
+.members .p15{
+    margin: auto;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    grid-row: span 3;
+}
+.members p {
+    text-align: center;
+    width: 20ch;
+}

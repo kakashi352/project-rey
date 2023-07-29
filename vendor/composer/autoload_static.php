@@ -4,9 +4,15 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit9193e761f2fd079e4817b819ad75c6be
+class ComposerStaticInit1a3ed9b26b526e692a4b38b11dbecd49
 {
     public static $prefixLengthsPsr4 = array (
+        'm' => 
+        array (
+            'mikehaertl\\wkhtmlto\\' => 20,
+            'mikehaertl\\tmp\\' => 15,
+            'mikehaertl\\shellcommand\\' => 24,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
@@ -14,6 +20,18 @@ class ComposerStaticInit9193e761f2fd079e4817b819ad75c6be
     );
 
     public static $prefixDirsPsr4 = array (
+        'mikehaertl\\wkhtmlto\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/phpwkhtmltopdf/src',
+        ),
+        'mikehaertl\\tmp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-tmpfile/src',
+        ),
+        'mikehaertl\\shellcommand\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
@@ -27,9 +45,9 @@ class ComposerStaticInit9193e761f2fd079e4817b819ad75c6be
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit9193e761f2fd079e4817b819ad75c6be::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit9193e761f2fd079e4817b819ad75c6be::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit9193e761f2fd079e4817b819ad75c6be::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1a3ed9b26b526e692a4b38b11dbecd49::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1a3ed9b26b526e692a4b38b11dbecd49::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1a3ed9b26b526e692a4b38b11dbecd49::$classMap;
 
         }, null, ClassLoader::class);
     }
