@@ -22,6 +22,7 @@ if (isset($_GET["pdf"])) {
     $Phone = $_GET["Phone"];
     $time = $_GET["time"];
     $year = $_GET["year"];
+    $month = $_GET["month"] + 1;
     $date = $_GET["date"];
     $day = $_GET["day"];
     $note = $_GET["note"];
@@ -34,12 +35,35 @@ if (isset($_GET["pdf"])) {
     $_SESSION['Phone'] = $Phone;
     $_SESSION['time'] = $time;
     $_SESSION['year'] = $year;
+    $_SESSION['month'] = $month;
     $_SESSION['date'] = $date;
     $_SESSION['day'] = $day;
     $_SESSION['note'] = $note;
     $_SESSION['select'] = $select;
 
-    
+    if ($day == 0) {
+      $days = 'الاحد';
+    }
+    if ($day == 1) {
+      $days = 'الاثنين';
+    }
+    if ($day ==2 ) {
+      $days = 'الثلاثاء';
+    }
+    if ($day == 3) {
+      $days = 'الاربعاء';
+    }
+    if ($day == 4) {
+      $days = 'الخميس';
+    }
+    if ($day == 5) {
+      $days = 'الجمعة';
+    }
+    if ($day == 6) {
+      $days = 'السبت';
+    }
+
+    $day += 1;
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
     // $mail->setLanguage('ar' , 'PHPMailer/language/phpmailer.lang-ar.php');
@@ -64,7 +88,7 @@ if (isset($_GET["pdf"])) {
         
         $mail->setFrom('doctors.drs1@gmail.com', 'وزارة الري و الصرف'); //from
         
-        $mail->addBCC('somo7738@gmail.com');  //<-- غير هنا                   //Name is optional
+        $mail->addBCC('7ssanie2014@gmail.com');  //<-- غير هنا                   //Name is optional
         
         $mail->isHTML(true);     
         
@@ -93,48 +117,28 @@ if (isset($_GET["pdf"])) {
         
         
           <div style=text-align: center;>
-            <h1 style=text-align: center; margin:.5em;><?php echo $_SESSION[select] ?></h1>
+            <h1 >$select</h1>
             <article>
               <div class=compine>
                 <p> اشارة الى خطاب محافظ الاحساء وتاريخ 1441/4/5<span>هـ</span> </p>
                 <p> بشأن الجولة الميدانية </p>
-                <p>ليوم
-                  <?php
-                  if ($_SESSION[day] == 0) {
-                    echo الاحد;
-                  }
-                  if ($_SESSION[day] == 1) {
-                    echo الاثنين;
-                  }
-                  if ($_SESSION[day] ==2 ) {
-                    echo الثلاثاء;
-                  }
-                  if ($_SESSION[day] == 3) {
-                    echo الاربعاء;
-                  }
-                  if ($_SESSION[day] == 4) {
-                    echo الخميس;
-                  }
-                  if ($_SESSION[day] == 5) {
-                    echo الجمعة;
-                  }
-                  if ($_SESSION[day] == 6) {
-                    echo السبت;
-                  }
-                  ?> </p>
-                <p> الموافق <?php echo $_SESSION[year]./.$_SESSION[date]./.$_SESSION[day] ?> </p>
-                <p> ساعة <?php echo $_SESSION[time] ?> </p>
+                <p>ليوم $days
+
+                  
+
+                <p> الموافق $year/$month/$date </p>
+                <p> ساعة $time</p>
                 <p>وبحضور لجنة الميدانية للمحافظة على الواحة من</p>
                 <p>,التعديات وعليها</p>
-                <p>تم الوقوف على المنشأة <?php echo $_SESSION[Company] ?></p>
-                <p>والواقعة في <?php echo $_SESSION[City] ?></p>
-                <p>والعائد للمواطن <?php echo $_SESSION[Citizin] ?></p>
-                <p>رقم (سجل / إقامة) <?php echo $_SESSION[National] ?></p>
-                <p>رقم الجوال: <?php echo $_SESSION[Phone] ?></p>
-                <p>ملاحضات <?php echo $_SESSION[note] ?></p>
+                <p>تم الوقوف على المنشأة  $Company </p>
+                <p>والواقعة في $City </p>
+                <p>والعائد للمواطن  $Citizin </p>
+                <p>رقم (سجل / إقامة) $National</p>
+                <p>رقم الجوال: $Phone</p>
+                <p>ملاحضات $note</p>
               </div>
         
-              <hr style=width: 100%; margin: 2em 0; />
+              <hr />
         
               <h1 dir=rtl><u>أعضاء اللجنة الميدانية</u></h1>
               <div class=members >

@@ -67,7 +67,7 @@ include 'generate-pdf.php';
             echo 'السبت';
           }
           ?> </p>
-        <p> الموافق <?php echo $_SESSION['year'].'/'.$_SESSION['date'].'/'.$_SESSION['day'] ?> </p>
+        <p> الموافق <?php echo $_SESSION['year'].'/'.$_SESSION['month'].'/'.$_SESSION['date'] ?> </p>
         <p> ساعة <?php echo $_SESSION['time'] ?> </p>
         <p>وبحضور لجنة الميدانية للمحافظة على الواحة من</p>
         <p>,التعديات وعليها</p>

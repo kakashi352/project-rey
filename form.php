@@ -81,6 +81,7 @@
         <input type="hidden" id="current-time" name="time" />
         <input type="hidden" id="day" name="day" />
         <input type="hidden" id="date" name="date" />
+        <input type="hidden" id="month" name="month" />
         <input type="hidden" id="year" name="year" />
 
 
@@ -105,6 +106,7 @@
   <script>
     let m = new Date();
     let year = document.querySelector('#year');
+    let month = document.querySelector('#month');
     let time = document.querySelector("#current-time");
     let hijriDate = document.querySelector("#date");
     let day = document.querySelector("#day");
@@ -117,7 +119,8 @@
     });
 
     year.value = new Date().getFullYear();
-    console.log(year.value);
+    month.value = new Date().getMonth();
+    console.log(month.value);
     hijriDate.value = new Date().getDate();
     day.value = new Date().getDay();
   </script>
